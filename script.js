@@ -3,9 +3,9 @@ const STUDIO_CONFIG = {
   tagline: 'Every Frame Tells a Story.',
   description: 'Cinematic photography for life\'s most meaningful moments.',
 
-  phoneDisplay: '+91 98765 43210',
-  phoneLink: '919876543210',
-  whatsappNumber: '919876543210',
+  phoneDisplay: '+91 99675 90265',
+  phoneLink: '919967590265',
+  whatsappNumber: '919967590265',
 
   email: 'hello@example.com',
   address: 'Demo Address, Mumbai, Maharashtra, India',
@@ -57,7 +57,7 @@ function updateStudioDetails() {
 
   if (elements.phoneLink) {
     elements.phoneLink.href = `tel:${STUDIO_CONFIG.phoneLink || phoneDigits}`;
-    elements.phoneLink.textContent = STUDIO_CONFIG.phoneDisplay || '+91 98765 43210';
+    elements.phoneLink.textContent = STUDIO_CONFIG.phoneDisplay || '+91 99675 90265';
   }
 
   if (elements.emailLink) {
@@ -91,7 +91,7 @@ function updateStudioDetails() {
     elements.year.textContent = new Date().getFullYear();
   }
 
-  if (STUDIO_CONFIG.demoMode || getPhoneDigits(STUDIO_CONFIG.whatsappNumber) === '919876543210') {
+  if (STUDIO_CONFIG.demoMode || getPhoneDigits(STUDIO_CONFIG.whatsappNumber) === '919967590265') {
     document.body.classList.add('demo-mode');
   }
 }
@@ -133,7 +133,7 @@ function buildPackageMessage(packageName) {
 }
 
 function openWhatsAppInquiry(details = {}) {
-  const number = getPhoneDigits(STUDIO_CONFIG.whatsappNumber || STUDIO_CONFIG.phoneLink || '919876543210');
+  const number = getPhoneDigits(STUDIO_CONFIG.whatsappNumber || STUDIO_CONFIG.phoneLink || '919967590265');
   const message = details.message || buildInquiryMessage(details);
   const url = `${whatsappLink}${number}?text=${encodeURIComponent(message)}`;
 
@@ -565,7 +565,7 @@ function setupWhatsAppButtons() {
     button.addEventListener('click', () => {
       const packageName = button.dataset.package || 'Photography package';
       const message = buildPackageMessage(packageName);
-      const number = getPhoneDigits(STUDIO_CONFIG.whatsappNumber || STUDIO_CONFIG.phoneLink || '919876543210');
+      const number = getPhoneDigits(STUDIO_CONFIG.whatsappNumber || STUDIO_CONFIG.phoneLink || '919967590265');
       const url = `${whatsappLink}${number}?text=${encodeURIComponent(message)}`;
       window.open(url, '_blank', 'noopener,noreferrer');
     });
